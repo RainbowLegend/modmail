@@ -481,7 +481,7 @@ class Modmail(commands.Bot):
         print("Log success")
 
     @commands.command()
-    async def reply(ctx, *, msg=''):
+    async def reply(self, ctx, *, msg=''):
         """Reply to users using this command."""
         categ = discord.utils.get(ctx.guild.categories, id=ctx.channel.category_id)
         if categ is not None and categ.name == 'Mod Mail':
